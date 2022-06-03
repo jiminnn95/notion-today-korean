@@ -3,6 +3,7 @@
 <head>
     <title>Greeting Message</title> 
     <style>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 #lbl {
     font-family: Nanum Pen Script;
     font-size: xx-large;
@@ -12,8 +13,6 @@
     text-align: center;
     line-height: 1.5;
     height:85%
-
-
 }
 #date{
     font-size:large;
@@ -21,7 +20,7 @@
 body{
     background-color: aliceblue;
 }
-    </style>
+</style>
 </head>
 <body>
     <div id="lbl"></div>
@@ -35,7 +34,7 @@ body{
     weekday[3] = "수요일";
     weekday[4] = "목요일";
     weekday[5] = "금요일";
-    weekday[6] = "Saturday";
+    weekday[6] = "토요일";
 
     
     var today = new Date();
@@ -43,14 +42,7 @@ body{
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
 
-    var greet;
-
-    if (hrs < 12)
-        greet = 'Good Morning  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon ';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  ';
+    var greet = "안녕하세요!"
 
     document.getElementById('lbl').innerHTML =
         greet+=`<div id="date"> It's ${date}</div>`;
