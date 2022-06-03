@@ -43,11 +43,9 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
-
-    var greet = "안녕하세요!"
+    var date = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate() + " " + dayOfWeek;
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
+        `<div id="date"> ${date}</div>`;
 </script> 
 </html>
