@@ -18,7 +18,9 @@
     height:85%
 }
 #date{
-    font-size:large;
+    font-family: 'Black Han Sans', sans-serif;
+    color: #626262;
+    font-size: xx-large;
 }
 body{
     background-color: aliceblue;
@@ -46,6 +48,6 @@ body{
     var date = today.getFullYear() + "/" + (today.getMonth()+1) + "/" + today.getDate() + " " + dayOfWeek;
 
     document.getElementById('lbl').innerHTML =
-        `<div id="date"> ${date}</div>`;
+        `<div id="date">${date}</div>`;
 </script> 
 </html>
